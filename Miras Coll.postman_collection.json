@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "9f9c64b8-b7fc-4f5b-8eb9-8a38be0724d4",
+		"name": "Miras Coll",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "Get Product Image By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/product/get/image/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"get",
+								"image",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Product Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/eldar/Downloads/IMG_9615.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/product/image/upload/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"image",
+								"upload",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sphere\":\"some sphere3\",\r\n    \"name\" : \"My Name1\",\r\n    \"delivery_cost\": 5003\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/product/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/products/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Product By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sphere\": \"Bich\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/product/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
