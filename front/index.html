@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-ru">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Login and Registration</title>
+
+<link href="css/style1.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/e67a350474.js"></script>
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <div class="form">
+          <form class="register-form" name="reg" onsubmit="return myValidation()">
+        
+            <input type="text" id="email" name="email" placeholder="Электронная почта"/>
+            <input type="text" id="name" name="name" placeholder="Имя"/>
+            <input type="password" id="psw" name="psw" placeholder="Пароль"/>
+
+            <button type="submit">Зарегистрироваться</button>
+            <p class="message">Уже зарегистрированы? <a href="#">Войдите</a></p>
+
+          </form>
+
+          <form class="login-form" name="reg1" onsubmit="return myValidation1()">
+
+            <input type="text" id="email" name="email" placeholder="Электронная почта"/>
+            <input type="password" id="psw" name="psw" placeholder="Пароль"/>
+
+            <button type="submit">Войти</button>
+            <p class="message">Еще не зарегистрировались? <a href="#">Создайте аккаунт</a></p>
+
+          </form>
+        </div>
+
+      </div>
+
+<script type="text/javascript" src="js/registration.js"></script>
+</body>
+</html>

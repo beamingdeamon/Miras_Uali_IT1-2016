@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-ru">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Admin panel</title>
+<link href="css/style4.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/e67a350474.js"></script>
+</head>
+
+<body>
+
+<header>
+    <div class="grid-container">
+        <div class="grid-item item1">Admin panel</div>      
+    </div>
+</header>
+
+<main>
+    <div class="grid-containerS">
+
+        <div class="grid-itemS form formcontainer">
+
+            <form name="reg" onsubmit="returnmyValidation()" id="user-form" method="post" action="">
+
+                <div class="form-item form-item1"><label for="email">Электронная почта</label></div>
+                <div class="form-item form-item2"><input class="form_nameinput" id="email" type="text" name="email"></div>
+                <div class="form-item form-item3"><label for="name">Имя</label></div>
+                <div class="form-item form-item4"><input class="form_nameinput" id="name" type="text" name="name"></div>
+                <div class="form-item form-item5"><label for="psw">Пароль</label></div>
+                <div class="form-item form-item6"><input class="form_nameinput" id="psw" type="password" name="psw"></div>
+                <div class="form-item form-item7"><label for="index">Индекс</label></div>
+                <div class="form-item form-item8"><input class="form_nameinput" id="index" type="text" name="index"></div>
+                <div class="form-item form-item9"><button class="form_submitbutton" type="submit">Добавить</button></div>
+                <div class="form-item form-item10"><button class="form_editbutton" onclick="editbutton()" type="submit">Изменить</button></div>
+            </form>
+
+            <div class="form-item form-item11">
+                <button onclick="document.location='index3admin.html'" class="navigation_button_auth">Главная</button>
+                <button onclick="disable()" class="navigation_button_auth">Disable</button>
+                <button onclick="enable()" class="navigation_button_auth">Enable</button>
+            </div>
+
+    </div>
+
+    <div class="grid-itemS table tablecontainer">
+
+        <div class="table-item table-item1">
+
+            <table id="table" class="user-list demotable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Email</th><th>Name</th><th>Password</th><th>Delete</th><th>Edit</th><th>Index</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="user-list"></tbody>
+
+            </table>
+
+        </div>
+            
+    </div> 
+
+    </div>
+</main>
+    
+<script type="text/javascript" src="js/crudadmin.js"></script>
+</body>
+</html>
