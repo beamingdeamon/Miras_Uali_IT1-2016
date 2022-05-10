@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('sphere');
             $table->string('name');
-            $table->int('delivery_cost')->default('0');
+            $table->integer('delivery_cost')->default('0');
             $table->timestamps();
         });
     }

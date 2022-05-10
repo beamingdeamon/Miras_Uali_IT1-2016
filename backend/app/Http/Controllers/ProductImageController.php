@@ -12,7 +12,7 @@ class ProductImageController extends Controller
     
     public function getImage($id)
     {
-        $image = ApplicantImage::where('user_id',$id)->latest()->first();
+        $image = ProductImage::where('product_id',$id)->latest()->first();
 
         return response($image,200);
     }
@@ -34,7 +34,7 @@ class ProductImageController extends Controller
 
 
         $ProductImage = ProductImage::create([
-            'user_id'=>$id,
+            'product_id'=>$id,
             'image_src' => $fullpath
         ]);
         

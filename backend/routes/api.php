@@ -18,7 +18,7 @@ use App\Http\Controllers\ProductImageController;
 
 Route::get('/products/get', [ProductController::class, 'getAllProducts'] );
 Route::post('/product/create', [ProductController::class, 'createProduct'] );
-Route::post('/product/create', [ProductController::class, 'createProduct'] );
-Route::put('/product/image/upload/{id}', [ProductImageController::class, 'upload'] );
+Route::put('/product/update/{id}', [ProductController::class, 'changeProduct'] );
+Route::post('/product/image/upload/{id}', [ProductImageController::class, 'upload'] );
 Route::get('/product/get/image/{id}', [ProductImageController::class, 'getImage'] );
 

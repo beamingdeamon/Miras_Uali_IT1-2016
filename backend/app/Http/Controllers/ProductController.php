@@ -29,13 +29,10 @@ class ProductController extends Controller
         if ($validator->fails()) {
             return response()->json(['error' => $validator->messages()], 200);
         }
-        if($validator['delivery_cost'] == null){
-            $validator['delivery_cost'] == 0;
-        }
         $product = Product::create([
-            'sphere' => $validator['sphere'],
-            'name' => $validator['name'],
-            'delivery_cost' => $validator['delivery_cost'],
+            'sphere' => $request->sphere,
+            'name' => $request->name,
+            'delivery_cost' => $request->delivery_cost,
         ]);
         return response()->json($product,200);
     }
@@ -56,8 +53,9 @@ class ProductController extends Controller
         if ($validator->fails()) {
             return response()->json(['error' => $validator->messages()], 200);
         }
+        $data = $request->all();
         $product = Product::where('id', $id)->first();
-        $product->update($validator);
+        $product->update($data);
         return response()->json($product,200);
        
     }
